@@ -1,5 +1,3 @@
-
-
 // #include<bits/stdc++.h>
 // using namespace std;
 
@@ -25,8 +23,8 @@
 //             reversedstring+=a;
 //         }
 //         cout<<"Reversed string:"<<reversedstring<<endl;
-//         // return 0;
 // }
+
 
 #include <bits/stdc++.h>
 using namespace std;
