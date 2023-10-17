@@ -8,20 +8,31 @@
 class Solution
 {
 public:
-    void permutation(vector<string> v, string ans, string original)
+    string helper(string str, int k, string ans)
     {
-        if (original == "")
+        int n = str.length();
+        if (n == 1)
         {
-            v.push_back(ans);
-            return;
+            ans += str;
+            return ans;
         }
-        for (int i = 0; i < original.length(); i++)
+        int fact = 1;
+        for (int i = 2; i <= n - 1; i++)
         {
-            char ch = original[i];
-            string left = original.substr(0, i);
-            string right = original.substr(i + 1);
-            permutation(v, ans, left + right);
+            fact *= i;
         }
+        int idx = k / fact;
+        if (k % fact == 0)
+            idx--;
+        char ch = str[idx];
+        string left = str.substr(0, idx);
+        string right = str.substr(idx + 1);
+        int q = 1;
+        if (k % fact == 0)
+            q = fact;
+        else
+            q = k % fact;
+        return helper(left + right, q, ans + ch);
     }
     string getPermutation(int n, int k)
     {
@@ -30,9 +41,7 @@ public:
         {
             str += to_string(i);
         }
-        vector<string> v;
-        permutation(v, "", str);
-        return v[k - 1];
+        return helper(str, k, "");
     }
 };
 // @lc code=end
