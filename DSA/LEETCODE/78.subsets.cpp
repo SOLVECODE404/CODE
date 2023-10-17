@@ -7,12 +7,6 @@
 // @lc code=start
 class Solution {
 public:
-    vector<vector<int>> subsets(vector<int>& nums) {
-        vector<vector<int>> result;
-        vector<int> subset;
-        generateSubsets(nums, 0, subset, result);
-        return result;
-    }
     void generateSubsets(const vector<int> &nums, int index, vector<int> &subset, vector<vector<int>> &result)
     {
         result.push_back(subset);
@@ -22,6 +16,12 @@ public:
             generateSubsets(nums, i + 1, subset, result);
             subset.pop_back();
         }
+    }                                                                                                                                                                                                       
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> result;
+        vector<int> subset;
+        generateSubsets(nums, 0, subset, result);
+        return result;
     }
 };
 // @lc code=end
