@@ -2,9 +2,10 @@
 using namespace std;
 
 int partition(int arr[],int si,int ei){
-    int pivotelement=arr[si];
+    int pivotelement=arr[(si+ei)/2];
     int count=0;
-    for(int i=si+1;i<=ei;i++){
+    for(int i=si;i<=ei;i++){
+        if(i==(si+ei)/2)continue;
         if(arr[i]<=pivotelement)count++;
     }
     int pivotidx=count+si;

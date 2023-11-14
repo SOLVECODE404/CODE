@@ -31,7 +31,6 @@ void mergeSort(vector<int>&v){
     mergeSort(a);
     mergeSort(b);
     merge(a,b,v);
-
 }
 
 int main(){
