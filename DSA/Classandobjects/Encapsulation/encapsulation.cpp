@@ -5,11 +5,10 @@ class youtubechannel
 {
 private:
     string name;
-    int subscribercount;
-    list<string>publishercount;
-protected:
     string ownername;
-public:
+    int subscribercount;
+    list<string> publishercount;
+public: 
     youtubechannel(string n, string ow)
     {
         name = n;
@@ -20,35 +19,31 @@ public:
         cout << endl;
         cout << name << endl;
         cout << ownername << endl;
-        cout << subscribercount << endl;
+        cout << subscribercount<<endl;
         for (string videotitles : publishercount)
         {
             cout << videotitles << " ";
         }
     }
-    void Subscribe()
-    {
+    void Subscribe(){
         subscribercount++;
     }
-    void Unsubscribe()
-    {
-        if (subscribercount > 0)
+    void Unsubscribe(){
+        if(subscribercount>0)
             subscribercount--;
     }
-};
-
-class Cookingyoutubechannel:public youtubechannel{
-    public:
-        Cookingyoutubechannel(string name,string ownername):youtubechannel(name,ownername){}
-        void practice(){cout<<ownername<<" is practising...";}
 };
 
 int main()
 {
     youtubechannel yt1("utsav", "singh");
+    // yt1.publishercount.push_back("ok by");
+    // yt1.publishercount.push_back("ju");
+    // yt1.publishercount.push_back("hy");
     youtubechannel yt2("Sardar", "singh");
-    Cookingyoutubechannel yt3("amys","singh");
-    yt3.practice();
+    // yt2.publishercount.push_back("ku");
+    // yt2.publishercount.push_back("nu");
+    // yt2.publishercount.push_back("li");
     yt1.Subscribe();
     yt1.Subscribe();
     yt1.Subscribe();

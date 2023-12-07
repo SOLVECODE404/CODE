@@ -2,6 +2,8 @@
   "C_Cpp.errorSquiggles": "enabled",
   "files.associations": {
     "vector": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "typeindex": "cpp",
+    "typeinfo": "cpp"
   }
 }
