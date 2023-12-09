@@ -47,7 +47,7 @@ int main()
 {
     youtubechannel yt1("utsav", "singh");
     youtubechannel yt2("Sardar", "singh");
-    Cookingyoutubechannel yt3("amys","singh");
+    Cookingyoutubechannel yt3("amys","singh");  
     yt3.practice();
     yt1.Subscribe();
     yt1.Subscribe();
