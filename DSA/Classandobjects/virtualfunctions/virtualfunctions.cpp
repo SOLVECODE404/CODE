@@ -20,7 +20,9 @@ public:
     }
 };
 int main(){
-    Instrument *i1=new Accordian();
+
+    //early binding is when the known of execution is known earlier at time of writing the code to getinfo from the function ...../
+    Instrument *i1=new Accordian();//late binding in which the execution is known at time of runtime ...../
     // i1->makesound();
     Instrument *i2=new Piano();
     // i2->makesound();
