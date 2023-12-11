@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 class youtubechannel
 {
 private:
@@ -36,13 +35,11 @@ public:
             subscribercount--;
     }
 };
-
 class Cookingyoutubechannel:public youtubechannel{
     public:
         Cookingyoutubechannel(string name,string ownername):youtubechannel(name,ownername){}
         void practice(){cout<<ownername<<" is practising...";}
 };
-
 int main()
 {
     youtubechannel yt1("utsav", "singh");
