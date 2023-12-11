@@ -12,6 +12,10 @@ class A{
     void puta(){
         cout<<"value of:"<<a<<endl;
     }
+    void display()
+    {
+        cout<<"Base class:"<<endl;
+    }
 };
 
 class B{
@@ -33,10 +37,15 @@ class C:public A,public B{
     void add(){
         cout<<"Addition:"<<a+b;
     }
+    void display()
+    {
+        cout << "Derived C class:" << endl;
+    }
 };
 int main()
 {
     C aa;
+    aa.A::display();
     aa.geta();
     aa.getb();
     aa.puta();
