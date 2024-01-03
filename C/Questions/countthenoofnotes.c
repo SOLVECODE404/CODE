@@ -19,5 +19,3 @@ int main()
     printf("no of 100 notes %d\n",n9);  
     
 }
-
-cse

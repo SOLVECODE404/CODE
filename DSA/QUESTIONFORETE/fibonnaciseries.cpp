@@ -14,5 +14,7 @@ void fibonnaci(int start,int next,int limit)
 int main(){
     int start;
     cin>>start;
+    int k;
+    cin>>k;
     fibonnaci(start,start+1,7);
 }
