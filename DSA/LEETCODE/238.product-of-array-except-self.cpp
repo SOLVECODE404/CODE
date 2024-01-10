@@ -18,5 +18,3 @@ public:
         return pre;
     }
 };
-// @lc code=end
-
