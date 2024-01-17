@@ -5,6 +5,8 @@
     "string": "cpp",
     "typeindex": "cpp",
     "typeinfo": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "cstdlib": "cpp",
+    "chrono": "cpp"
   }
 }
