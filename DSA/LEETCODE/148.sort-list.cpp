@@ -1,7 +1,6 @@
 
 class Solution {
 public:
-    // first method
     ListNode *merge(ListNode *a, ListNode *b)
     {
         ListNode *c = new ListNode(100);
@@ -27,17 +26,21 @@ public:
             tempc->next = a;
         return c->next;
     }
-    ListNode* mergeKLists(vector<ListNode*>& arr) {
-        if(arr.size()==0)return NULL;
-        while(arr.size()>1){
-            ListNode *a=arr[arr.size()-1];
-            arr.pop_back();
-            ListNode *b = arr[arr.size() - 1];
-            arr.pop_back();
-            ListNode *c=merge(a,b);
-            arr.push_back(c);
+    ListNode* sortList(ListNode* head) {
+        if(head==NULL || head->next==NULL)return head;
+        ListNode*slow=head;
+        ListNode*fast=head;
+        while(fast->next!=NULL && fast->next->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
         }
-        return arr[0]; 
+        ListNode*a=head;
+        ListNode*b=slow->next;
+        slow->next=NULL;
+        a=sortList(a);
+        b=sortList(b);
+        ListNode*c=merge(a,b);
+        return c;
     }
 };
 // @lc code=end
