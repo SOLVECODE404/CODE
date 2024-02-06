@@ -24,7 +24,7 @@ public:
             i++;
             j++;
         }
-        for(int i=maxidx;i<maxidx+k;i++){
+        for(int i=maxidx;i<maxidx+k;i++){       
             grumpy[i]=0;
         }
         int sum=0;
