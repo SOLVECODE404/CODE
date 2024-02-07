@@ -23,9 +23,6 @@ int main(){
 // by 2 for one and rest is for that no
 //  that much time in that period of time..
 
-
-
-
     cout<<(17<<1)<<endl;/*multiply by 2*/
     cout<<(17<<2)<<endl;/*square of 2 multiply*/
     cout<<(14>>1)<<endl;/*divide by 2*/

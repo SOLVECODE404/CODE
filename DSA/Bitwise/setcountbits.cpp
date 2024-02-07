@@ -17,7 +17,7 @@ int setcountbits2(int num){
 // some same part and then the rest is same but fliped from the first number in binary representation   
 
 int main(){
-    cout<<setcountbits(13)<<endl;
+    cout<<setcountbits(21)<<endl;
     cout<<setcountbits(64)<<endl;
     cout<<setcountbits2(13)<<endl;
     cout<<setcountbits2(64)<<endl;
