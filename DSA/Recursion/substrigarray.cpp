@@ -13,7 +13,7 @@ void subarray(vector<int>v,int arr[],int n,int idx){
         v.push_back(arr[idx]);
         subarray(v,arr,n,idx+1);
     }
-}
+}   
 
 int main(){
     int arr[]={1,2,3};
